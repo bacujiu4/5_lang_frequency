@@ -1,7 +1,27 @@
-# Frequency Analysis of Words
+# Частотный анализ слов
 
-[TODO. There will be project description]
+На вход принимает текст, выдает 10 наиболее употребляемых слов в порядке убывания частоты повторения в тексте
+и количество повторений
 
-# Project Goals
+# Как запустить
 
-The code is written for educational purposes. Training course for web-developers - [DEVMAN.org](https://devman.org)
+Скрипт требует для своей работы установленного интерпретатора Python версии 3.5
+
+Запуск на Linux:
+```bash
+$python.exe lang_frequency.py book1.txt
+и   - 10649
+в   - 5308
+не  - 4404
+что - 3954
+он  - 3825
+на  - 3383
+с   - 3108
+как - 2151
+я   - 1959
+его - 1937
+```
+
+# Цели проекта
+
+Код создан в учебных целях. В рамках учебного курса по веб-разработке - [DEVMAN.org](https://devman.org)
