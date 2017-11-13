@@ -1,12 +1,31 @@
+import codecs
+from collections import Counter
+import argparse
+import re
 
 
-def load_data(filepath):
-    pass
+def load_data(file_path):
+    with codecs.open(file_path, 'r', 'cp1251') as opened_file:
+        text = opened_file.read()
+    return text
 
 
 def get_most_frequent_words(text):
-    pass
+    text = re.findall(r'\w+', text.lower())
+    most_frequent_words = Counter(text)
+    return most_frequent_words
+
+
+def parse_args():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('file_path')
+    return parser.parse_args()
+
 
 
 if __name__ == '__main__':
-    pass
+    args = parse_args()
+    text = load_data(args.file_path)
+    most_frequent_words = get_most_frequent_words(text)
+    for word, count in most_frequent_words.most_common(10):
+        print('{0:3} - {1:0d}'.format(word, count))
