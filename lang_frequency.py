@@ -22,7 +22,6 @@ def parse_args():
     return parser.parse_args()
 
 
-
 if __name__ == '__main__':
     args = parse_args()
     text = load_data(args.file_path)
