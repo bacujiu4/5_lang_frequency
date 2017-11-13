@@ -9,7 +9,7 @@
 
 Запуск на Linux:
 ```bash
-$python.exe lang_frequency.py book1.txt
+$python.exe lang_frequency.py book1.txt 10
 и   - 10649
 в   - 5308
 не  - 4404
